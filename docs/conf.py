@@ -20,6 +20,28 @@ import os
 from pygments_lexer_solidity import SolidityLexer, YulLexer
 
 def setup(sphinx):
+    """
+    This function is used to set up syntax highlighting in a Sphinx documentation site for the Solidity and Yul programming languages.
+    
+    Parameters:
+    - sphinx (Sphinx object): The Sphinx object to which the lexers for Solidity and Yul will be added.
+    
+    Returns:
+    - None
+    
+    Processing Logic:
+    - The function adds the SolidityLexer to the Sphinx object, enabling syntax highlighting for Solidity code.
+    - The function also adds the YulLexer to the Sphinx object, enabling syntax highlighting for Yul code.
+    
+    Examples:
+    - Example usage of the function:
+    
+        sphinx = create_sphinx_object()
+        setup(sphinx)
+    
+        After calling the function, the Sphinx object `sphinx` will have the SolidityLexer and YulLexer added to it, enabling syntax highlighting for Solidity and Yul code in the Sphinx documentation site.
+    """
+    
     sphinx.add_lexer('Solidity', SolidityLexer)
     sphinx.add_lexer('Yul', YulLexer)
 
